@@ -27,7 +27,7 @@ body {
 header {
     background-color: var(--header-color);
     text-align: center;
-    height: 12vh;
+    height: 10vh;
 }
 
 header .container {
