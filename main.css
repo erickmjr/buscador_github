@@ -63,6 +63,7 @@ header .container {
 }
 
 .numbers {
+    position: relative;
     display: flex;
     gap: 15%;
     max-width: 100%;
@@ -70,7 +71,7 @@ header .container {
     justify-content: center;
     margin: 0 auto;
     padding: 0;
-    padding-right: 5%;
+    
 }
 
 .numbers-item {
