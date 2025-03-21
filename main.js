@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-    const form = $('#form');
     const buttonSearch = $('#btn-search');
 
     const elementProfileAvatar = $('.profile-avatar');
@@ -39,9 +38,12 @@ $(document).ready(function(){
             const profileRepos = json.public_repos;
             const profileLink = json.html_url;
 
-            elementProfileAvatar.replaceWith( `
-                <img class="profile-avatar" src="${profileAvatar}" alt="${profileUserName}"</img>
-            `);
+            elementProfileAvatar.attr({
+                src: profileAvatar,
+                alt: profileName
+            });
+
+                
 
             elementProfileName.html(`${profileName}`);
 
@@ -53,9 +55,11 @@ $(document).ready(function(){
 
             elementProfileFollowing.html(`${profileFollowing}`);
 
-            elementProfileLink.replaceWith(`
-                <a href="${profileLink}" class="profile-link" target="_blank">View on Github</a>    
-            `);
+            elementProfileLink.attr({
+                href: profileLink,
+                target: '_blank'
+            });
+
         })
         .catch(function(error) {
             alert("Ocorreu um erro ao buscar o endereço, tente novamente mais tarde.");
