@@ -27,7 +27,7 @@ body {
 header {
     background-color: var(--header-color);
     text-align: center;
-    height: 20vh;
+    height: 12vh;
 }
 
 header .container {
@@ -71,7 +71,6 @@ header .container {
     justify-content: center;
     margin: 0 auto;
     padding: 0;
-    
 }
 
 .numbers-item {
